@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">To-Do List</string>
+    <string name="create_new_note">Create new Note</string>
+    <string name="button">+</string>
+    <string name="title">Title</string>
+    <string name="short_description">Short Description</string>
+    <string name="date">Date</string>
+    <string name="deadline">DeadLine</string>
+    <string name="low_priority">Низкий</string>
+    <string name="mid_priority">Средний</string>
+    <string name="high_priority">Высокий</string>
+    <string name="save_note">Save Note</string>
+    <string name="your_note">Here you can edit your note</string>
+    <string name="save_edits">Save Edits</string>
+    <string name="delete_note">delete note</string>
+    <string name="done">Done</string>
+</resources>

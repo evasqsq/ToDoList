@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNoteActivity"
+    android:background="#81BECE"
+    android:orientation="horizontal">
+
+
+    <!--    <EditText-->
+<!--&lt;!&ndash;        android:id="@+id/editTextNoteEditedTitle"&ndash;&gt;-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="20sp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="@string/title"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:padding="15sp"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textAlignment="center"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.497"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextNoteEditedDescription"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="20sp"-->
+<!--        android:layout_marginTop="52dp"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:padding="15sp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:hint="@string/short_description"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextNoteEditedTitle" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextDeadLine"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="20sp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="@string/deadline"-->
+<!--        android:inputType="datetime"-->
+<!--        android:padding="15sp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.428"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextNoteEditedDescription"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+    <TextView
+        android:id="@+id/titletextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:gravity="center"
+        android:text="Add new note"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.775"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="369dp"
+        android:layout_height="286dp"
+        android:layout_margin="10sp"
+        android:background="@drawable/rounded_corner"
+        android:orientation="vertical"
+        android:padding="5sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSaveEditedNote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/editTextNoteEditedTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#3000B0FF"
+            android:hint="Title"
+            android:padding="8sp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/editTextNoteEditedDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#3000B0FF"
+            android:gravity="top"
+            android:hint="Decription"
+            android:padding="8sp"
+            android:textAlignment="center"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/editTextDeadLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#3000B0FF"
+            android:gravity="top"
+            android:hint="DeadLine"
+            android:padding="8sp"
+            android:textAlignment="center"
+            tools:ignore="RtlCompat" />
+
+        <Button
+            android:id="@+id/buttonChooseDeadLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose DeadLine" />
+
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15sp"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSaveEditedNote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.887">
+
+        <RadioButton
+            android:id="@+id/radioButtonEditedLow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4sp"
+            android:background="@drawable/rounded_corner_low_priotity"
+            android:text="@string/low_priority"
+            android:textColor="#808080"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="395dp" />
+
+
+        <RadioButton
+            android:id="@+id/radioButtonEditedMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4sp"
+            android:background="@drawable/rounded_corner_medium_priotity"
+            android:checked="true"
+            android:padding="10sp"
+            android:text="@string/mid_priority"
+            android:textColor="#808080"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="395dp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonEditedHigh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4sp"
+            android:background="@drawable/rounded_corner_high_priotity"
+            android:padding="10sp"
+            android:text="@string/high_priority"
+            android:textColor="#808080"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="395dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonSaveEditedNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/save_note"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

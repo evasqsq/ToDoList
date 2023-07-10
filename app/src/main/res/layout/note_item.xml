@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<TextView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/textViewNote"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    tools:text="Hello"-->
+<!--    android:textColor="@color/white"-->
+<!--    android:textSize="24sp"-->
+<!--    android:padding="10sp"-->
+<!--    android:layout_margin="10sp"-->
+<!--    tools:background="@android:color/holo_red_light"/>-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:id="@+id/note_layout"
+    android:layout_margin="10sp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/rounded_corner"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleOutput"
+        android:textSize="25sp"
+        android:padding="10sp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        tools:text="My title"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionOutput"
+        android:layout_below="@id/titleOutput"
+        android:padding="10sp"
+        android:textColor="#393939"
+        tools:text="My long long long descrption"/>
+
+    <TextView
+        android:id="@+id/timeOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descriptionOutput"
+        android:layout_marginTop="9dp"
+        android:gravity="end"
+        android:padding="10sp"
+        android:textColor="#858484"
+        android:textSize="15sp"
+        tools:text="Jan 21 2020 " />
+
+</RelativeLayout>
